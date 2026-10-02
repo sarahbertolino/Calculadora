@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .calculadora {
+      background-color: rgb(255, 255, 255);
+      padding: 30px;
+      border-radius: 8px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: small;
+      color: pre;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border: 1px solid #767676;
+      border-radius: 10px;
+    }
+
+    .operacoes {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+
+    .operacoes button {
+      flex: 1;
+      padding: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #767676;
+      border-radius: 8px;
+    }
+    
+    .btn-limpar {
+      padding: 6px 12px;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      border: 1px solid #767676;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      
+    }
+
+    .resultado-container {
+      font-weight: bold;
+      text-align: center;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculadora">
+    <h2>Calculadora</h2>
+    <h3>Calculando de uma forma mais fácil!</h3>
+
+    <!-- Campos de entrada (aceitam decimais e números negativos) -->
+    <input type="number" id="numero1" placeholder="Primeiro número" step="any">
+    <input type="number" id="numero2" placeholder="Segundo número" step="any">
+
+    <!-- Botões das operações -->
+    <div class="operacoes">
+      <button class="soma" onclick="calcular('+')">+</button>
+      <button class="subtracao" onclick="calcular('-')">-</button>
+      <button class="multiplicacao" onclick="calcular('*')">×</button>
+      <button class="divisao" onclick="calcular('/')">÷</button>
+    </div>
+
+    <!-- Botão de limpar -->
+    <button class="btn-limpar" onclick="limpar()">Limpar</button>
+
+    <!-- Exibição do resultado -->
+    <div class="resultado-container">
+      Resultado: <span id="resultado"></span>
+    </div>
+  </div>
+
+  <!-- Inclusão do JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
