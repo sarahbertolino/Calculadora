@@ -85,11 +85,11 @@
     <h2>Calculadora</h2>
     <h3>Calculando de uma forma mais fácil!</h3>
 
-    <!-- Campos de entrada (aceitam decimais e números negativos) -->
+    
     <input type="number" id="numero1" placeholder="Primeiro número" step="any">
     <input type="number" id="numero2" placeholder="Segundo número" step="any">
 
-    <!-- Botões das operações -->
+    
     <div class="operacoes">
       <button class="soma" onclick="calcular('+')">+</button>
       <button class="subtracao" onclick="calcular('-')">-</button>
@@ -97,16 +97,14 @@
       <button class="divisao" onclick="calcular('/')">÷</button>
     </div>
 
-    <!-- Botão de limpar -->
+    
     <button class="btn-limpar" onclick="limpar()">Limpar</button>
 
-    <!-- Exibição do resultado -->
     <div class="resultado-container">
       Resultado: <span id="resultado"></span>
     </div>
   </div>
 
-  <!-- Inclusão do JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
